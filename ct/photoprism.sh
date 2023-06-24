@@ -60,6 +60,7 @@ function update_script() {
   msg_info "Stopping PhotoPrism"
   sudo systemctl stop photoprism
   msg_ok "Stopped PhotoPrism"
+  export GOPROXY=direct
 
   msg_info "Cloning PhotoPrism"
   git clone https://github.com/photoprism/photoprism.git &>/dev/null
